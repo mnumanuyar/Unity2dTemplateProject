@@ -52,7 +52,7 @@ jobs:
         env:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }} 
         with:
-          source-directory: 'Build\WebGL'
+          source-directory: 'build'
           destination-github-username: 'mnumanuyar'
           destination-repository-name: 'mnumanuyar.github.io'
           target-directory: 'unity-deploy-test'
