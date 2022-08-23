@@ -45,3 +45,16 @@ jobs:
         with:
           name: Build
           path: build
+          
+      # deploy to pages
+      - name: Pushes to github pages
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }} 
+        with:
+          source-directory: 'build\WebGL\WebGL'
+          destination-github-username: 'mnumanuyar'
+          destination-repository-name: 'mnumanuyar.github.io'
+          target-directory: 'unity-deploy-test'
+          user-email: m.numanuyar@gmail.com
+          target-branch: main
