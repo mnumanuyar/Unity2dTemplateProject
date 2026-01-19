@@ -1,0 +1,91 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.layout {
+  width: min(900px, 95vw);
+  display: grid;
+  gap: 24px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #9da7b2;
+}
+
+.game-shell {
+  background: radial-gradient(circle at top, rgba(88, 166, 255, 0.2), transparent 65%),
+    #111827;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+}
+
+canvas {
+  border-radius: 16px;
+  background: #0b0f16;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  max-width: 100%;
+}
+
+.scoreboard {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.divider {
+  color: #58a6ff;
+}
+
+.status {
+  font-size: 0.95rem;
+  color: #9da7b2;
+}
+
+footer button {
+  background: #238636;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+footer button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(35, 134, 54, 0.3);
+}
+
+footer button:active {
+  transform: translateY(0);
+}

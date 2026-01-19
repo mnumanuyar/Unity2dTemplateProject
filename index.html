@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pong for GitHub Pages</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <header>
+      <h1>Ping Pong</h1>
+      <p>Move your paddle with <strong>W/S</strong> or <strong>↑/↓</strong>. First to 7 wins.</p>
+    </header>
+    <section class="game-shell">
+      <div class="scoreboard" aria-live="polite">
+        <span id="playerScore">0</span>
+        <span class="divider">:</span>
+        <span id="cpuScore">0</span>
+      </div>
+      <canvas id="pong" width="720" height="420" aria-label="Ping Pong game"></canvas>
+      <div class="status" id="status">Press Space to start</div>
+    </section>
+    <footer>
+      <button id="reset" type="button">Reset Match</button>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
